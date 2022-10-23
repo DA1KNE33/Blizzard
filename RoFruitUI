@@ -1464,7 +1464,7 @@ function ems:Ti(text)
     local  lineframe = Instance.new("TextLabel")
                   
     lineframe.Parent = tiframe
-    lineframe.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
+    lineframe.BackgroundColor3 = _G.Color
     lineframe.BackgroundTransparency = 0
     lineframe.AnchorPoint = Vector2.new(0.6, 0.5)
     lineframe.Position = UDim2.new(0., 0, 0.4, 0)
