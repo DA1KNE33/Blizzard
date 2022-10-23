@@ -4,8 +4,9 @@ do
         ui:Destroy()
     end
 end
-if ThemeFont == nil then ThemeFont = Enum.Font.SciFi end
+
 if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
+
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -121,7 +122,7 @@ function create:Win()
     PageTap.Position = UDim2.new(0.189873412, 0, 0, 0)
     PageTap.Size = UDim2.new(0, 320, 0, 56)
 
-    UIGradient_PageTap.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, G.Color), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+    UIGradient_PageTap.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(230, 0, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 35, 138))}
     UIGradient_PageTap.Parent = PageTap
 
     
@@ -185,7 +186,7 @@ function tap:addtap(text)
     TextButton_Tap.BackgroundTransparency = 1
     TextButton_Tap.Position = UDim2.new(0.0151898731, 0, 0.132352948, 0)
     TextButton_Tap.Size = UDim2.new(0, 75, 0, 50)
-    TextButton_Tap.Font = ThemeFont
+    TextButton_Tap.Font = Enum.Font.GothamSemibold
     TextButton_Tap.TextColor3 = Color3.fromRGB(155, 155, 155)
     TextButton_Tap.TextSize = 10.000
     TextButton_Tap.TextWrapped = true
@@ -201,7 +202,7 @@ function tap:addtap(text)
     TextLabel_Tap.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabel_Tap.Position = UDim2.new(0.52, 0, 0.8, 0)
     TextLabel_Tap.Size = UDim2.new(0, 0, 0, 0)
-    TextLabel_Tap.Font = ThemeFont
+    TextLabel_Tap.Font = Enum.Font.SourceSans
     TextLabel_Tap.Text = " "
     TextLabel_Tap.TextColor3 = _G.Color
     TextLabel_Tap.TextSize = 14.000
@@ -247,7 +248,7 @@ function tap:addtap(text)
     ScolPage.BorderSizePixel = 0
     ScolPage.Size = UDim2.new(0, 395, 0, 324)
     ScolPage.ScrollBarThickness = 3
-    ScolPage.ScrollBarImageColor3 =  _G.Color
+    ScolPage.ScrollBarImageColor3 =  Color3.fromRGB(255, 0, 125)
 
     MainPage.Name = "MainPage"
     MainPage.Parent = ScolPage
@@ -411,7 +412,7 @@ function ems:Button(text,callback)
     emsTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
     emsTextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
     emsTextButton.Size = UDim2.new(1, 0, 0.8, 0)
-    emsTextButton.Font = ThemeFont
+    emsTextButton.Font = Enum.Font.GothamSemibold
     emsTextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     emsTextButton.TextSize = 13.000
     emsTextButton.TextWrapped = true
@@ -433,7 +434,7 @@ function ems:Button(text,callback)
     TextLabel_emsTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabel_emsTextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextLabel_emsTextButton.Size = UDim2.new(0, 0, 0, 0)
-    TextLabel_emsTextButton.Font = ThemeFont
+    TextLabel_emsTextButton.Font = Enum.Font.GothamSemibold
     TextLabel_emsTextButton.Text = text
     TextLabel_emsTextButton.TextColor3 = _G.Color
     TextLabel_emsTextButton.TextSize = 10.000
@@ -490,7 +491,7 @@ function ems:Button1(text,callback)
     
     ToggleFrame1.Name = "ToggleFrame"
     ToggleFrame1.Parent = ScolPage2
-    ToggleFrame1.BackgroundColor3 = _G.Color
+    ToggleFrame1.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
     ToggleFrame1.BorderSizePixel = 0
     ToggleFrame1.BackgroundTransparency = 0
     ToggleFrame1.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -504,7 +505,7 @@ function ems:Button1(text,callback)
     emsTextButton1.AnchorPoint = Vector2.new(0.5, 0.5)
     emsTextButton1.Position = UDim2.new(0.5, 0, 0.5, 0)
     emsTextButton1.Size = UDim2.new(1, 0, 0.8, 0)
-    emsTextButton1.Font = ThemeFont
+    emsTextButton1.Font = Enum.Font.GothamSemibold
     emsTextButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
     emsTextButton1.TextSize = 13.000
     emsTextButton1.TextWrapped = true
@@ -526,7 +527,7 @@ function ems:Button1(text,callback)
     TextLabel_emsTextButton1.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabel_emsTextButton1.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextLabel_emsTextButton1.Size = UDim2.new(0, 0, 0, 0)
-    TextLabel_emsTextButton1.Font = ThemeFont
+    TextLabel_emsTextButton1.Font = Enum.Font.GothamSemibold
     TextLabel_emsTextButton1.Text = text
     TextLabel_emsTextButton1.TextColor3 = Color3.fromRGB(255, 255 ,255)
     TextLabel_emsTextButton1.TextSize = 10.000
@@ -536,7 +537,7 @@ function ems:Button1(text,callback)
                     
     MheeFrameStroke1.Thickness = 1
     MheeFrameStroke1.LineJoinMode = Enum.LineJoinMode.Round
-    MheeFrameStroke1.Color = _G.Color
+    MheeFrameStroke1.Color = Color3.fromRGB(255, 0 ,95)
     MheeFrameStroke1.Transparency = 0
 
     emsTextButton1.MouseButton1Click:Connect(function()
@@ -599,7 +600,7 @@ function  ems:Toggle(text,de,callback)
     ToggleButton.AnchorPoint = Vector2.new(0, 0.5)
     ToggleButton.Position = UDim2.new(0.5, 0, 0.5, 0)
     ToggleButton.Size = UDim2.new(0, 155, 0, 25)
-    ToggleButton.Font = ThemeFont
+    ToggleButton.Font = Enum.Font.GothamSemibold
     ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     ToggleButton.TextSize = 13.000
     ToggleButton.TextWrapped = false
@@ -616,7 +617,7 @@ function  ems:Toggle(text,de,callback)
     ToggleButton2.AnchorPoint = Vector2.new(0.5, 0.5)
     ToggleButton2.Position = UDim2.new(1, 0, 0.45, 0)
     ToggleButton2.Size = UDim2.new(0, 20, 0, 20)
-    ToggleButton2.Font = ThemeFont
+    ToggleButton2.Font = Enum.Font.GothamSemibold
     ToggleButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
     ToggleButton2.TextSize = 13.000
     ToggleButton2.TextWrapped = false
@@ -632,7 +633,7 @@ function  ems:Toggle(text,de,callback)
     TextLabelToggle.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabelToggle.Position = UDim2.new(0.64, 0, 0.4, 0)
     TextLabelToggle.Size =  UDim2.new(0, 150, 0, 40)
-    TextLabelToggle.Font = ThemeFont
+    TextLabelToggle.Font = Enum.Font.GothamBold
     TextLabelToggle.Text = tostring(text)
     TextLabelToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabelToggle.TextSize = 11.000
@@ -652,7 +653,7 @@ function  ems:Toggle(text,de,callback)
     TextButton_2_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
     TextButton_2_Toggle.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextButton_2_Toggle.Size = UDim2.new(0, 19, 0, 19)
-    TextButton_2_Toggle.Font = ThemeFont
+    TextButton_2_Toggle.Font = Enum.Font.SourceSans
     TextButton_2_Toggle.Text = " "
     TextButton_2_Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
     TextButton_2_Toggle.TextSize = 12.000
@@ -668,7 +669,7 @@ function  ems:Toggle(text,de,callback)
     TextButton_3_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
     TextButton_3_Toggle.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextButton_3_Toggle.Size = UDim2.new(0, 17, 0, 17)
-    TextButton_3_Toggle.Font = ThemeFont
+    TextButton_3_Toggle.Font = Enum.Font.SourceSans
     TextButton_3_Toggle.Text = " "
     TextButton_3_Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
     TextButton_3_Toggle.TextSize = 12.000
@@ -789,7 +790,7 @@ function ems:DropDown(text,text2,list,callback)
 
     DropFrame.Name = "DropFrame"
     DropFrame.Parent = ScolPage2
-    DropFrame.BackgroundColor3 = _G.Color
+    DropFrame.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
     DropFrame.BorderSizePixel = 0
     DropFrame.BackgroundTransparency = 1
     DropFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -807,7 +808,7 @@ function ems:DropDown(text,text2,list,callback)
     TextLabelDrop.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabelDrop.Position = UDim2.new(0.5, 0, 0.2, 0)
     TextLabelDrop.Size = UDim2.new(0, 155, 0, 15)
-    TextLabelDrop.Font = ThemeFont
+    TextLabelDrop.Font = Enum.Font.GothamSemibold
     TextLabelDrop.Text = text
     TextLabelDrop.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabelDrop.TextSize = 10.000
@@ -835,7 +836,7 @@ function ems:DropDown(text,text2,list,callback)
     DropButton.AnchorPoint = Vector2.new(0.5, 0.5)
     DropButton.Position = UDim2.new(0.5, 0, 0.5, 0)
     DropButton.Size = UDim2.new(0, 155, 0, 24)
-    DropButton.Font = ThemeFont
+    DropButton.Font = Enum.Font.GothamSemibold
     DropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     DropButton.TextSize = 11.000
     DropButton.TextWrapped = true
@@ -853,7 +854,7 @@ function ems:DropDown(text,text2,list,callback)
     TextLabelDrop2.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabelDrop2.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextLabelDrop2.Size = UDim2.new(0, 155, 0, 22)
-    TextLabelDrop2.Font = ThemeFont
+    TextLabelDrop2.Font = Enum.Font.GothamSemibold
     TextLabelDrop2.Text = text2.." : "
     TextLabelDrop2.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabelDrop2.TextSize = 10.000
@@ -880,7 +881,7 @@ function ems:DropDown(text,text2,list,callback)
     TextButton_Dropdown.BackgroundColor3 = _G.Color
     TextButton_Dropdown.BorderSizePixel = 0
     TextButton_Dropdown.Size = UDim2.new(0, 22, 0, 24)
-    TextButton_Dropdown.Font = ThemeFont
+    TextButton_Dropdown.Font = Enum.Font.SourceSans
     TextButton_Dropdown.Text = "  "
     TextButton_Dropdown.TextColor3 = Color3.fromRGB(0, 0, 0)
     TextButton_Dropdown.TextSize = 14.000
@@ -908,7 +909,7 @@ function ems:DropDown(text,text2,list,callback)
     
     ListFrame.Name = "ListFrame"
     ListFrame.Parent = ScolPage2
-    ListFrame.BackgroundColor3 = _G.Color
+    ListFrame.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
     ListFrame.BorderSizePixel = 0
     ListFrame.BackgroundTransparency = 1
     ListFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -972,7 +973,7 @@ function ems:DropDown(text,text2,list,callback)
     listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15 ,15)
     listDropButton.BorderSizePixel = 0
     listDropButton.Size = UDim2.new(0, 155, 0, 24)
-    listDropButton.Font = ThemeFont
+    listDropButton.Font = Enum.Font.GothamSemibold
     listDropButton.Text = tostring(v)
     listDropButton.TextColor3 = _G.Color
     listDropButton.TextSize = 11.000
@@ -1118,7 +1119,7 @@ end
     listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     listDropButton.BorderSizePixel = 0
     listDropButton.Size = UDim2.new(0, 155, 0, 24)
-    listDropButton.Font = ThemeFont
+    listDropButton.Font = Enum.Font.GothamSemibold
     listDropButton.Text = tostring(text2)
     listDropButton.TextColor3 = _G.Color
     listDropButton.TextSize = 11.000
@@ -1201,7 +1202,7 @@ function ems:Slder(text,min,max,de,callback)
     fakeclick.BackgroundColor3 = Color3.fromRGB(15,15,15)
     fakeclick.BorderSizePixel = 0
     fakeclick.Size = UDim2.new(1, 0, 1, 0)
-    fakeclick.Font = ThemeFont
+    fakeclick.Font = Enum.Font.GothamSemibold
     fakeclick.Text = ""
     fakeclick.TextColor3 = Color3.fromRGB(255, 255, 255)
     fakeclick.Transparency = 1
@@ -1231,7 +1232,7 @@ function ems:Slder(text,min,max,de,callback)
     TalabelSlider.AnchorPoint = Vector2.new(0.5, 0.5)
     TalabelSlider.Position = UDim2.new(0.5, 0, 0.2, 0)
     TalabelSlider.Size = UDim2.new(0, 145, 0, 20)
-    TalabelSlider.Font = ThemeFont
+    TalabelSlider.Font = Enum.Font.GothamSemibold
     TalabelSlider.Text = text
     TalabelSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
     TalabelSlider.TextSize = 11.000
@@ -1342,7 +1343,7 @@ function ems:Slder(text,min,max,de,callback)
     CustomValue.AnchorPoint = Vector2.new(0.5, 0.5)
     CustomValue.Position = UDim2.new(0.5, 0, 0.5, 0)
     CustomValue.Size = UDim2.new(0, 145, 0, 26)
-    CustomValue.Font = ThemeFont
+    CustomValue.Font = Enum.Font.GothamSemibold
     CustomValue.PlaceholderColor3 = Color3.fromRGB(222, 222, 222)
     CustomValue.PlaceholderText =  ""
     CustomValue.Text =  tostring(de and math.floor((de / max) * (max - min) + min) or 0)
@@ -1463,13 +1464,13 @@ function ems:Ti(text)
     local  lineframe = Instance.new("TextLabel")
                   
     lineframe.Parent = tiframe
-    lineframe.BackgroundColor3 = _G.Color
+    lineframe.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
     lineframe.BackgroundTransparency = 0
     lineframe.AnchorPoint = Vector2.new(0.6, 0.5)
     lineframe.Position = UDim2.new(0., 0, 0.4, 0)
     lineframe.BorderSizePixel = 0
     lineframe.Size = UDim2.new(0, 40, 0, 1)
-    lineframe.Font = ThemeFont
+    lineframe.Font = Enum.Font.GothamSemibold
     lineframe.TextColor3 = Color3.fromRGB(255, 255, 255)
     lineframe.TextSize = 13.000
     lineframe.Text = ""
@@ -1483,7 +1484,7 @@ function ems:Ti(text)
     lineframe2.Position = UDim2.new(1, 0, 0.4, 0)
     lineframe2.BorderSizePixel = 0
     lineframe2.Size = UDim2.new(0, 40, 0, 1)
-    lineframe2.Font = ThemeFont
+    lineframe2.Font = Enum.Font.GothamSemibold
     lineframe2.TextColor3 = Color3.fromRGB(255, 255, 255)
     lineframe2.TextSize = 11.000
     lineframe2.Text = ""
@@ -1497,7 +1498,7 @@ function ems:Ti(text)
     lineframe3.Position = UDim2.new(0.5, 0, 0.5, 0)
     lineframe3.BorderSizePixel = 0
     lineframe3.Size = UDim2.new(0, 130, 0, 20)
-    lineframe3.Font = ThemeFont
+    lineframe3.Font = Enum.Font.GothamSemibold
     lineframe3.Text = tostring(text)
     lineframe3.TextColor3 = _G.Color
     lineframe3.TextSize = 12.000
@@ -1515,7 +1516,7 @@ function ems:Label(text)
     Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
     Labelxd.BorderSizePixel = 0
     Labelxd.Size = UDim2.new(0, 155, 0, 13)
-    Labelxd.Font = ThemeFont
+    Labelxd.Font = Enum.Font.GothamSemibold
     Labelxd.Text = tostring(text)
     Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
     Labelxd.TextSize = 12.000
