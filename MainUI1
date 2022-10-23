@@ -831,7 +831,7 @@ function ems:DropDown(text,text2,list,callback)
     local DropButton = Instance.new("TextButton")
 
     DropButton.Parent = FrameDrop
-    DropButton.BackgroundColor3 = _G.Color
+    DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     DropButton.BackgroundTransparency = 1
     DropButton.AnchorPoint = Vector2.new(0.5, 0.5)
     DropButton.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -1500,7 +1500,7 @@ function ems:Ti(text)
     lineframe3.Size = UDim2.new(0, 130, 0, 20)
     lineframe3.Font = Enum.Font.GothamSemibold
     lineframe3.Text = tostring(text)
-    lineframe3.TextColor3 = _G.Color
+    lineframe3.TextColor3 = Color3.fromRGB(255, 255, 255)
     lineframe3.TextSize = 12.000
 end
 
