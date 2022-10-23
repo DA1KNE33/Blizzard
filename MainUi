@@ -19,8 +19,8 @@ local library = {
 	library.theme = {
         fontsize = 15,
         titlesize = 18,
-        if font == nil then font = Enum.Font.Code end,
-        if background == nil then background = "rbxassetid://11363396083" end,
+        font = Enum.Font.Code end,
+        background = "rbxassetid://11363396083",
         tilesize = 50,
         cursor = false,
         cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
