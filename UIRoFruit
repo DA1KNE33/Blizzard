@@ -1,5 +1,5 @@
 do 
-    local ui =  game:GetService("CoreGui"):FindFirstChild("JxdzHub2") 
+    local ui =  game:GetService("CoreGui"):FindFirstChild("JxdzHub_RF") 
     if ui then
         ui:Destroy()
     end
@@ -15,7 +15,7 @@ local Mouse = LocalPlayer:GetMouse()
 
 local Atomlib = Instance.new("ScreenGui")
 
-Atomlib.Name = "JxdzHub2"
+Atomlib.Name = "JxdzHub_RF"
 Atomlib.Parent = game:GetService("CoreGui")
 Atomlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
