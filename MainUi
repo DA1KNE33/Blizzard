@@ -3,6 +3,7 @@ local library = {
 		items = { }
 	}
     local ThemeFont
+    local ThemeImage
     if ThemeFont == nil then ThemeFont = Enum.Font.SciFi end
     if ThemeImage == nil then ThemeImage = "rbxassetid://11363394947" end
     if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
