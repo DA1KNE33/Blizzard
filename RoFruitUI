@@ -4,6 +4,8 @@ do
         ui:Destroy()
     end
 end
+ if _G.Color == nil then _G.Color = Color3.fromRGB(39, 150, 255) end
+ if _G.Color2 == nil then _G.Color2 = Color3.fromRGB(0, 255, 68) end
 
 
 
@@ -203,7 +205,7 @@ function tap:addtap(text)
     TextLabel_Tap.Size = UDim2.new(0, 0, 0, 0)
     TextLabel_Tap.Font = Enum.Font.SourceSans
     TextLabel_Tap.Text = " "
-    TextLabel_Tap.TextColor3 = Color3.fromRGB(255, 0, 95)
+    TextLabel_Tap.TextColor3 = _G.Color
     TextLabel_Tap.TextSize = 14.000
     TextLabel_Tap.BorderSizePixel = 0
 
@@ -429,13 +431,13 @@ function ems:Button(text,callback)
 
     TextLabel_emsTextButton.Parent = emsTextButton
     TextLabel_emsTextButton.Name = "TextLabel_emsTextButton"
-    TextLabel_emsTextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 95)
+    TextLabel_emsTextButton.BackgroundColor3 = _G.Color
     TextLabel_emsTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
     TextLabel_emsTextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextLabel_emsTextButton.Size = UDim2.new(0, 0, 0, 0)
     TextLabel_emsTextButton.Font = Enum.Font.GothamSemibold
     TextLabel_emsTextButton.Text = text
-    TextLabel_emsTextButton.TextColor3 = Color3.fromRGB(255, 0, 95)
+    TextLabel_emsTextButton.TextColor3 = _G.Color
     TextLabel_emsTextButton.TextSize = 10.000
     TextLabel_emsTextButton.BorderSizePixel = 0
 
@@ -443,7 +445,7 @@ function ems:Button(text,callback)
                     
     MheeFrameStroke.Thickness = 1
     MheeFrameStroke.LineJoinMode = Enum.LineJoinMode.Round
-    MheeFrameStroke.Color = Color3.fromRGB(255, 0, 95)
+    MheeFrameStroke.Color = _G.Color
     MheeFrameStroke.Transparency = 0
 
     emsTextButton.MouseButton1Click:Connect(function()
@@ -468,7 +470,7 @@ function ems:Button(text,callback)
             TweenService:Create(
                 emsTextButton,
                 TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 =  Color3.fromRGB(255, 0, 95)} -- UDim2.new(0, 128, 0, 25)
+                {BackgroundColor3 =  _G.Color} -- UDim2.new(0, 128, 0, 25)
             ):Play()
 --     end
         -- joincheck = not joincheck
@@ -479,7 +481,7 @@ function ems:Button(text,callback)
             TweenService:Create(
                 emsTextButton,
                 TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 =  Color3.fromRGB(255, 0, 95)} -- UDim2.new(0, 128, 0, 25)
+                {BackgroundColor3 =  _G.Color} -- UDim2.new(0, 128, 0, 25)
             ):Play()
     end)
 end
@@ -490,7 +492,7 @@ function ems:Button1(text,callback)
     
     ToggleFrame1.Name = "ToggleFrame"
     ToggleFrame1.Parent = ScolPage2
-    ToggleFrame1.BackgroundColor3 = Color3.fromRGB(255, 0 ,95)
+    ToggleFrame1.BackgroundColor3 = _G.Color
     ToggleFrame1.BorderSizePixel = 0
     ToggleFrame1.BackgroundTransparency = 0
     ToggleFrame1.Position = UDim2.new(0.5, 0, 0.5, 0)
