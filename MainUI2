@@ -204,7 +204,7 @@ function tap:addtap(text)
     TextLabel_Tap.Size = UDim2.new(0, 0, 0, 0)
     TextLabel_Tap.Font = Enum.Font.SourceSans
     TextLabel_Tap.Text = " "
-    TextLabel_Tap.TextColor3 = _G.Color
+    TextLabel_Tap.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel_Tap.TextSize = 14.000
     TextLabel_Tap.BorderSizePixel = 0
 
