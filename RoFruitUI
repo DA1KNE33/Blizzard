@@ -537,7 +537,7 @@ function ems:Button1(text,callback)
                     
     MheeFrameStroke1.Thickness = 1
     MheeFrameStroke1.LineJoinMode = Enum.LineJoinMode.Round
-    MheeFrameStroke1.Color = Color3.fromRGB(255, 0 ,95)
+    MheeFrameStroke1.Color = _G.Color
     MheeFrameStroke1.Transparency = 0
 
     emsTextButton1.MouseButton1Click:Connect(function()
