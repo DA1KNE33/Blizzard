@@ -4,8 +4,8 @@ do
         ui:Destroy()
     end
 end
-
-
+if ThemeFont == nil then ThemeFont = Enum.Font.SciFi end
+if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
