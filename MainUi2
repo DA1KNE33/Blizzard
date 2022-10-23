@@ -3,10 +3,8 @@ do
     if ui then
         ui:Destroy()
     end
-    for i, v in pairs (game:GetService("CoreGui"):GetDescendants()) do
-    	if v.Name = "JxdzHub" and
-	  
-	 end
+    if getgenv().executed then
+        return
     end
 end
 
