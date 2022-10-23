@@ -122,7 +122,7 @@ function create:Win()
     PageTap.Position = UDim2.new(0.189873412, 0, 0, 0)
     PageTap.Size = UDim2.new(0, 320, 0, 56)
 
-    UIGradient_PageTap.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(230, 0, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 35, 138))}
+    UIGradient_PageTap.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(80, 245, 245)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
     UIGradient_PageTap.Parent = PageTap
 
     
@@ -248,7 +248,7 @@ function tap:addtap(text)
     ScolPage.BorderSizePixel = 0
     ScolPage.Size = UDim2.new(0, 395, 0, 324)
     ScolPage.ScrollBarThickness = 3
-    ScolPage.ScrollBarImageColor3 =  Color3.fromRGB(255, 0, 125)
+    ScolPage.ScrollBarImageColor3 =  _G.Color
 
     MainPage.Name = "MainPage"
     MainPage.Parent = ScolPage
