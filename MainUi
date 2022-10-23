@@ -2,6 +2,9 @@ local library = {
 		flags = { },
 		items = { }
 	}
+    local ThemeFont
+    if ThemeFont == nil then ThemeFont = Enum.Font.SciFi end
+    if ThemeImage == nil then ThemeImage = "rbxassetid://11363394947" end
     if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
     if _G.Color2 == nil then _G.Color2 = Color3.fromRGB(0, 151, 156) end
     -- Services
@@ -19,8 +22,8 @@ local library = {
 	library.theme = {
         fontsize = 15,
         titlesize = 18,
-        font = Enum.Font.Code,
-        background = "rbxassetid://11363396083",
+        font = ThemeFont,
+        background = ThemeImage,
         tilesize = 50,
         cursor = false,
         cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
