@@ -176,7 +176,7 @@ function tap:addtap(text)
     TextButton_Tap.Size = UDim2.new(0, 75, 0, 50)
     TextButton_Tap.Font = _G.TextFont
     TextButton_Tap.TextColor3 = Color3.fromRGB(155, 155, 155)
-    TextButton_Tap.TextSize = 16.000
+    TextButton_Tap.TextSize = 14.000
     TextButton_Tap.TextWrapped = true
     TextButton_Tap.Text = text
     
@@ -193,7 +193,7 @@ function tap:addtap(text)
     TextLabel_Tap.Font = _G.TextFont
     TextLabel_Tap.Text = " "
     TextLabel_Tap.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TextLabel_Tap.TextSize = 16.000
+    TextLabel_Tap.TextSize = 14.000
     TextLabel_Tap.BorderSizePixel = 0
 
 
