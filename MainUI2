@@ -87,7 +87,7 @@ function create:Win()
     local fs = false 
     local currentservertoggled = ""
     local Main = Instance.new("Frame")
-    local Logo = Instance.new("ImageLabel")
+
 
     Main.Name = "Main"
     Main.Parent = Atomlib
@@ -98,17 +98,6 @@ function create:Win()
     Main.ClipsDescendants = true 
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
 
-    
-    Logo.Name = "Logo"
-    Logo.Parent = Main
-    Logo.Image = "rbxassetid://11237843937"
-    Logo.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Logo.Position = UDim2.new(0.05, 0, 0.05, 0)
-    Logo.Size = UDim2.new(0, 56, 0, 56)
-    Logo.ImageTransparency = 0
-    Logo.BackgroundTransparency = 1
-    Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Logo.AnchorPoint = Vector2.new(0.05, 0.05)
     
     local PageTap = Instance.new("Frame")
     local UIGradient_PageTap = Instance.new("UIGradient")
