@@ -4,7 +4,7 @@ do
         ui:Destroy()
     end
 end
-if _G.TextFont == nil then _G.TextFont = Enum.Font.SciFi
+if _G.TextFont == nil then _G.TextFont = Enum.Font.SciFi end
 if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
 
 
