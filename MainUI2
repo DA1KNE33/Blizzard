@@ -845,7 +845,7 @@ function ems:DropDown(text,text2,list,callback)
     TextLabelDrop2.Position = UDim2.new(0.5, 0, 0.5, 0)
     TextLabelDrop2.Size = UDim2.new(0, 155, 0, 22)
     TextLabelDrop2.Font = _G.TextFont
-    TextLabelDrop2.Text = ""
+    TextLabelDrop2.Text = text2
     TextLabelDrop2.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabelDrop2.TextSize = 10.000
     TextLabelDrop2.BorderSizePixel = 0
@@ -986,7 +986,7 @@ function ems:DropDown(text,text2,list,callback)
             wait()
         until ScolPage_list.Size ==  UDim2.new(0, 155, 0, 0)
         ListFrame.Visible = false
-        TextLabelDrop2.Text = text2.." : "..tostring(v)  
+        TextLabelDrop2.Text = tostring(v)  
         callback(v)
     end
 )
@@ -1134,7 +1134,7 @@ end
             wait()
         until ScolPage_list.Size ==  UDim2.new(0, 140, 0, 0)
         ListFrame.Visible = false
-        TextLabelDrop2.Text = text.." : "..tostring(text2)  
+        TextLabelDrop2.Text = tostring(text2)  
         callback(text2)
     end
 )
