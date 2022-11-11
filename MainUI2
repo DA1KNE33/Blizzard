@@ -118,7 +118,7 @@ function create:Win()
 	local ScolTap = Instance.new("ScrollingFrame")
 	local UIListLayout_ScolTap = Instance.new("UIListLayout")
 	local UIPadding_ScolTap = Instance.new("UIPadding")
-
+	
 	ScolTap.Name = "ScolTap"
 	ScolTap.Parent = PageTap
 	ScolTap.Active = true
@@ -129,6 +129,10 @@ function create:Win()
 	ScolTap.CanvasSize = UDim2.new(0.5, 0, 0, 0)
 	ScolTap.ScrollBarThickness = 3
 	ScolTap.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
+	
+	Logo.Name = "Logo"
+	Logo.Parent = ScolTap
+	Logo.Size = UDim2.new(0, 50, 0, 50)
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
@@ -1437,65 +1441,9 @@ function create:Win()
 				return  SliderFunc
 
 			end
-
-			function ems:Ti(text)
-				local tiframe = Instance.new("Frame")
-
-				tiframe.Name = "tiframe"
-				tiframe.Parent = ScolPage2
-				tiframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				tiframe.BackgroundTransparency = 1
-				tiframe.BorderSizePixel = 0
-				tiframe.ClipsDescendants = true
-				tiframe.AnchorPoint = Vector2.new(0.5, 0.5)
-				tiframe.Position = UDim2.new(0.5, 0, 0.5, 0)
-				tiframe.Size = UDim2.new(0, 155, 0, 20)
-
-				local  lineframe = Instance.new("TextLabel")
-
-				lineframe.Parent = tiframe
-				lineframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe.BackgroundTransparency = 0
-				lineframe.AnchorPoint = Vector2.new(0.6, 0.5)
-				lineframe.Position = UDim2.new(0., 0, 0.4, 0)
-				lineframe.BorderSizePixel = 0
-				lineframe.Size = UDim2.new(0, 40, 0, 1)
-				lineframe.Font = _G.TextFont
-				lineframe.TextColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe.TextSize = 13.000
-				lineframe.Text = ""
-
-				local  lineframe2 = Instance.new("TextLabel")
-
-				lineframe2.Parent = tiframe
-				lineframe2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe2.BackgroundTransparency = 0
-				lineframe2.AnchorPoint = Vector2.new(0.5, 0.5)
-				lineframe2.Position = UDim2.new(1, 0, 0.4, 0)
-				lineframe2.BorderSizePixel = 0
-				lineframe2.Size = UDim2.new(0, 40, 0, 1)
-				lineframe2.Font = _G.TextFont
-				lineframe2.TextColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe2.TextSize = 11.000
-				lineframe2.Text = ""
-
-				local  lineframe3 = Instance.new("TextLabel")
-
-				lineframe3.Parent = tiframe
-				lineframe3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe3.BackgroundTransparency = 1
-				lineframe3.AnchorPoint = Vector2.new(0.5, 0.5)
-				lineframe3.Position = UDim2.new(0.5, 0, 0.5, 0)
-				lineframe3.BorderSizePixel = 0
-				lineframe3.Size = UDim2.new(0, 130, 0, 20)
-				lineframe3.Font = _G.TextFont
-				lineframe3.Text = tostring(text)
-				lineframe3.TextColor3 = Color3.fromRGB(255, 255, 255)
-				lineframe3.TextSize = 12.000
-			end
-			function ems:CreateConfigSystem(text,side,callback)
+			function ems:CreateConfig(side)
 				local configSystem = { }
-				configSystem.configFolder = window.name .. "/" .. tostring(game.Players.LocalPlayer.Name) .. "_BF"
+				configSystem.configFolder = window.name .. "/" .. tostring(game.Players.LocalPlayer.Name)..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 				if (not isfolder(configSystem.configFolder)) then
 					makefolder(tostring(configSystem.configFolder))
 				end
@@ -1602,53 +1550,106 @@ function create:Win()
 						end)
 					end
 				end)
-				configSystem.Delete = configSystem.sector:AddButton("Delete", function()
-					for i, v in pairs(listfiles(configSystem.configFolder)) do
-						Config:Remove(tostring(v):gsub(configSystem.configFolder .. "\\", ""):gsub(".txt", ""))
+				for i, v in pairs(listfiles(configSystem.configFolder)) do
+					Config:Remove(tostring(v):gsub(configSystem.configFolder .. "\\", ""):gsub(".txt", ""))
+				end
+				if (not Config:Get() or Config:Get() == "") then
+					return
+				end
+				if (not isfile(configSystem.configFolder .. "/" .. Config:Get() .. ".txt")) then
+					return
+				end
+				delfile(configSystem.configFolder .. "/" .. Config:Get() .. ".txt")
+				for i, v in pairs(listfiles(configSystem.configFolder)) do
+					if v:find(".txt") then
+						Config:Add(tostring(v):gsub(configSystem.configFolder .. "\\", ""):gsub(".txt", ""))
 					end
-					if (not Config:Get() or Config:Get() == "") then
-						return
-					end
-					if (not isfile(configSystem.configFolder .. "/" .. Config:Get() .. ".txt")) then
-						return
-					end
-					delfile(configSystem.configFolder .. "/" .. Config:Get() .. ".txt")
-					for i, v in pairs(listfiles(configSystem.configFolder)) do
-						if v:find(".txt") then
-							Config:Add(tostring(v):gsub(configSystem.configFolder .. "\\", ""):gsub(".txt", ""))
-						end
-					end
-				end)
+				end
 				return configSystem
 			end
-		end
+			function ems:Ti(text)
+				local tiframe = Instance.new("Frame")
 
-		function ems:Label(text)
+				tiframe.Name = "tiframe"
+				tiframe.Parent = ScolPage2
+				tiframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				tiframe.BackgroundTransparency = 1
+				tiframe.BorderSizePixel = 0
+				tiframe.ClipsDescendants = true
+				tiframe.AnchorPoint = Vector2.new(0.5, 0.5)
+				tiframe.Position = UDim2.new(0.5, 0, 0.5, 0)
+				tiframe.Size = UDim2.new(0, 155, 0, 20)
 
-			local labelfuc = {}
-			local  Labelxd = Instance.new("TextLabel")
+				local  lineframe = Instance.new("TextLabel")
 
-			Labelxd.Parent = ScolPage2
-			Labelxd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Labelxd.BackgroundTransparency = 1
-			Labelxd.AnchorPoint = Vector2.new(0.5, 0.5)
-			Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
-			Labelxd.BorderSizePixel = 0
-			Labelxd.Size = UDim2.new(0, 155, 0, 13)
-			Labelxd.Font = _G.TextFont
-			Labelxd.Text = tostring(text)
-			Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Labelxd.TextSize = 12.000
+				lineframe.Parent = tiframe
+				lineframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe.BackgroundTransparency = 0
+				lineframe.AnchorPoint = Vector2.new(0.6, 0.5)
+				lineframe.Position = UDim2.new(0., 0, 0.4, 0)
+				lineframe.BorderSizePixel = 0
+				lineframe.Size = UDim2.new(0, 40, 0, 1)
+				lineframe.Font = _G.TextFont
+				lineframe.TextColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe.TextSize = 13.000
+				lineframe.Text = ""
 
-			function  labelfuc:Change(text2)
-				Labelxd.Text = tostring(text2)
+				local  lineframe2 = Instance.new("TextLabel")
+
+				lineframe2.Parent = tiframe
+				lineframe2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe2.BackgroundTransparency = 0
+				lineframe2.AnchorPoint = Vector2.new(0.5, 0.5)
+				lineframe2.Position = UDim2.new(1, 0, 0.4, 0)
+				lineframe2.BorderSizePixel = 0
+				lineframe2.Size = UDim2.new(0, 40, 0, 1)
+				lineframe2.Font = _G.TextFont
+				lineframe2.TextColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe2.TextSize = 11.000
+				lineframe2.Text = ""
+
+				local  lineframe3 = Instance.new("TextLabel")
+
+				lineframe3.Parent = tiframe
+				lineframe3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe3.BackgroundTransparency = 1
+				lineframe3.AnchorPoint = Vector2.new(0.5, 0.5)
+				lineframe3.Position = UDim2.new(0.5, 0, 0.5, 0)
+				lineframe3.BorderSizePixel = 0
+				lineframe3.Size = UDim2.new(0, 130, 0, 20)
+				lineframe3.Font = _G.TextFont
+				lineframe3.Text = tostring(text)
+				lineframe3.TextColor3 = Color3.fromRGB(255, 255, 255)
+				lineframe3.TextSize = 12.000
 			end
-			return  labelfuc
+
+			function ems:Label(text)
+
+				local labelfuc = {}
+				local  Labelxd = Instance.new("TextLabel")
+
+				Labelxd.Parent = ScolPage2
+				Labelxd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				Labelxd.BackgroundTransparency = 1
+				Labelxd.AnchorPoint = Vector2.new(0.5, 0.5)
+				Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
+				Labelxd.BorderSizePixel = 0
+				Labelxd.Size = UDim2.new(0, 155, 0, 13)
+				Labelxd.Font = _G.TextFont
+				Labelxd.Text = tostring(text)
+				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
+				Labelxd.TextSize = 12.000
+
+				function  labelfuc:Change(text2)
+					Labelxd.Text = tostring(text2)
+				end
+				return  labelfuc
+			end
+			
+			return ems 
 		end
-
-		return ems 
+		return page
 	end
-	return page
+	return tap
 end
-
 return create
