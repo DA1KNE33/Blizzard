@@ -97,10 +97,34 @@ function create:Win()
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	Main.ClipsDescendants = true 
 	Main.AnchorPoint = Vector2.new(0.5, 0.5)
-
-
+	
 	local PageTap = Instance.new("Frame")
 	local UIGradient_PageTap = Instance.new("UIGradient")
+	
+	local WaterMark = Instance.new("ImageLabel")
+	WaterMark.Name = "WaterMark"
+	WaterMark.Parent = Atomlib
+	WaterMark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	WaterMark.BackgroundTransparency = 1.000
+	WaterMark.Position = UDim2.new(0.920161366, 0, 0.963156164, 0)
+	WaterMark.Size = UDim2.new(0.0796874985, 0, 0.0361781083, 0)
+	WaterMark.Image = "rbxassetid://11483425326"
+
+	local function LHBJT_fake_script() -- WaterMark.LocalScript 
+		local script = Instance.new('LocalScript', WaterMark)
+
+		local Info = TweenInfo.new(.3)
+
+		script.Parent.MouseLeave:Connect(function()
+			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=0})
+			Tween:Play()
+		end)
+		script.Parent.MouseEnter:Connect(function()
+			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=1})
+			Tween:Play()
+		end)
+	end
+	coroutine.wrap(LHBJT_fake_script)()
 
 	PageTap.Name = "PageTap"
 	PageTap.Parent = Main
