@@ -159,7 +159,7 @@ function create:Win()
 	Logo.Position = UDim2.new(-0.16, 0, 0.3 ,0)
 	Logo.BackgroundTransparency = 1
 	Logo.Image = "rbxassetid://11511118010"
-	Logo.Size = UDim2.new(0,3 0, 0, 30)
+	Logo.Size = UDim2.new(0,30, 0, 30)
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
