@@ -802,7 +802,7 @@ function create:Win()
 				end
 			end
 
-			function ems:DropDown(text,text2,list,callback)
+			function ems:DropDown(text2,list,callback)
 
 
 				local checkdrop = {checkscol = false ; }
