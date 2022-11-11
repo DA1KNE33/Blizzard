@@ -131,8 +131,8 @@ function create:Win()
 	ScolTap.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
 	
 	Logo.Name = "Logo"
-	Logo.Parent = ScolTap 
-	Logo.Position = UDim2.new(-0.2,0,0.15,0)
+	Logo.Parent = PageTap 
+	Logo.Position = UDim2.new(-0.2, 0, 0.15 ,0)
 	Logo.BackgroundTransparency = 1
 	Logo.Image = "rbxassetid://11511118010"
 	Logo.Size = UDim2.new(0, 50, 0, 50)
