@@ -97,10 +97,10 @@ function create:Win()
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	Main.ClipsDescendants = true 
 	Main.AnchorPoint = Vector2.new(0.5, 0.5)
-	
+
 	local PageTap = Instance.new("Frame")
 	local UIGradient_PageTap = Instance.new("UIGradient")
-	
+
 	local WaterMark = Instance.new("ImageLabel")
 	WaterMark.Name = "WaterMark"
 	WaterMark.Parent = Atomlib
@@ -142,7 +142,7 @@ function create:Win()
 	local ScolTap = Instance.new("ScrollingFrame")
 	local UIListLayout_ScolTap = Instance.new("UIListLayout")
 	local UIPadding_ScolTap = Instance.new("UIPadding")
-	
+
 	ScolTap.Name = "ScolTap"
 	ScolTap.Parent = PageTap
 	ScolTap.Active = true
@@ -153,13 +153,13 @@ function create:Win()
 	ScolTap.CanvasSize = UDim2.new(0.5, 0, 0, 0)
 	ScolTap.ScrollBarThickness = 3
 	ScolTap.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
-	
+
 	Logo.Name = "Logo"
 	Logo.Parent = PageTap 
 	Logo.Position = UDim2.new(-0.16, 0, 0.3 ,0)
 	Logo.BackgroundTransparency = 1
 	Logo.Image = "rbxassetid://11511118010"
-	Logo.Size = UDim2.new(0,3 0, 0, 30)
+	Logo.Size = UDim2.new(0,30, 0, 30)
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
@@ -820,22 +820,22 @@ function create:Win()
 				DropFrame.BackgroundTransparency = 1
 				DropFrame.ClipsDescendants = true  
 
- 				local TextLabelDrop = Instance.new("TextLabel") 
+				local TextLabelDrop = Instance.new("TextLabel") 
 
-    				TextLabelDrop.Parent = DropFrame
-    				TextLabelDrop.Name = "TextLabelDrop"
-    				TextLabelDrop.BackgroundColor3 = Color3.fromRGB(255, 0, 95)
-    				TextLabelDrop.BackgroundTransparency = 1
-    				TextLabelDrop.AnchorPoint = Vector2.new(0.5, 0.5)
-    				TextLabelDrop.Position = UDim2.new(0.5, 0, 0.2, 0)
-    				TextLabelDrop.Size = UDim2.new(0, 155, 0, 15)
-    				TextLabelDrop.Font = _G.TextFont
-    				TextLabelDrop.Text = text
-    				TextLabelDrop.TextColor3 = _G.Color
-    				TextLabelDrop.TextSize = 10.000
+				TextLabelDrop.Parent = DropFrame
+				TextLabelDrop.Name = "TextLabelDrop"
+				TextLabelDrop.BackgroundColor3 = Color3.fromRGB(255, 0, 95)
+				TextLabelDrop.BackgroundTransparency = 1
+				TextLabelDrop.AnchorPoint = Vector2.new(0.5, 0.5)
+				TextLabelDrop.Position = UDim2.new(0.5, 0, 0.2, 0)
+				TextLabelDrop.Size = UDim2.new(0, 155, 0, 15)
+				TextLabelDrop.Font = _G.TextFont
+				TextLabelDrop.Text = text
+				TextLabelDrop.TextColor3 = _G.Color
+				TextLabelDrop.TextSize = 10.000
 				TextLabelDrop.BorderSizePixel = 0
-    				TextLabelDrop.ClipsDescendants = true 
-				
+				TextLabelDrop.ClipsDescendants = true 
+
 				local FrameDrop = Instance.new("Frame")
 
 				FrameDrop.Name = "FrameDrop"
@@ -1546,7 +1546,7 @@ function create:Win()
 				end
 				return  labelfuc
 			end
-			
+
 			return ems 
 		end
 		return page
