@@ -110,14 +110,19 @@ function create:Win()
 	WaterMark.Size = UDim2.new(0.0796874985, 0, 0.0361781083, 0)
 	WaterMark.Image = "rbxassetid://11483425326"
 	
-	WaterMark.Parent.MouseLeave:Connect(function()
-		local Tween = game:GetService("TweenService"):Create(WaterMark,TweenInfo.new(.3),{ImageTransparency=0})
-		Tween:Play()
-	end)
-	WaterMark.Parent.MouseEnter:Connect(function()
-		local Tween = game:GetService("TweenService"):Create(WaterMark,TweenInfo.new(.3),{ImageTransparency=1})
-		Tween:Play()
-	end)
+	local function LHBJT_fake_script() -- WaterMark.LocalScript 
+		local script = Instance.new('LocalScript', WaterMark)
+		local Info = TweenInfo.new(.3)
+			script.Parent.MouseLeave:Connect(function()
+			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=0})
+			Tween:Play()
+		end)
+		script.Parent.MouseEnter:Connect(function()
+			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=1})
+			Tween:Play()
+		end)
+	end
+	coroutine.wrap(LHBJT_fake_script)()
 	
 
 	PageTap.Name = "PageTap"
