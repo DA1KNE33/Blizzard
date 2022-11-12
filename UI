@@ -852,7 +852,7 @@ function create:Win()
 				DropButton.Size = UDim2.new(0, 155, 0, 24)
 				DropButton.Font = _G.TextFont
 				DropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-				DropButton.TextSize = 14.000
+				DropButton.TextSize = 12.000
 				DropButton.TextWrapped = true
 				DropButton.Text = ""
 				DropButton.BorderSizePixel = 0 
@@ -871,7 +871,7 @@ function create:Win()
 				TextLabelDrop2.Font = _G.TextFont
 				TextLabelDrop2.Text = text
 				TextLabelDrop2.TextColor3 = Color3.fromRGB(255, 255, 255)
-				TextLabelDrop2.TextSize = 14.000
+				TextLabelDrop2.TextSize = 12.000
 				TextLabelDrop2.BorderSizePixel = 0
 				TextLabelDrop2.ClipsDescendants = true 
 
