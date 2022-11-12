@@ -110,7 +110,7 @@ function create:Win()
 	WaterMark.Size = UDim2.new(0.0796874985, 0, 0.0361781083, 0)
 	WaterMark.Image = "rbxassetid://11483425326"
 
-	local function LHBJT_fake_script() -- WaterMark.LocalScript 
+	local function WaterMarkft() -- WaterMark.LocalScript 
 		local script = Instance.new('LocalScript', WaterMark)
 
 		local Info = TweenInfo.new(.3)
@@ -124,7 +124,7 @@ function create:Win()
 			Tween:Play()
 		end)
 	end
-	coroutine.wrap(LHBJT_fake_script)()
+	coroutine.wrap(WaterMarkft)()
 
 	PageTap.Name = "PageTap"
 	PageTap.Parent = Main
@@ -160,6 +160,15 @@ function create:Win()
 	Logo.BackgroundTransparency = 1
 	Logo.Image = "rbxassetid://11511118010"
 	Logo.Size = UDim2.new(0,30, 0, 30)
+
+	local function Logoft() -- WaterMark.LocalScript 
+		local script = Instance.new('LocalScript', Logo)
+		
+		while wait() do
+			script.Parent.Rotation = script.Parent.Rotation + 1
+		end
+	end
+	coroutine.wrap(Logoft)()
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
@@ -1507,11 +1516,13 @@ function create:Win()
 				lineframe3.TextColor3 = Color3.fromRGB(255, 255, 255)
 				lineframe3.TextSize = 12.000
 			end
-
+			function ems:Webhook(text,value)
+				
+			end
 			function ems:Label(text)
 
 				local labelfuc = {}
-				local  Labelxd = Instance.new("TextLabel")
+				local Labelxd = Instance.new("TextLabel")
 
 				Labelxd.Parent = ScolPage2
 				Labelxd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
