@@ -163,7 +163,7 @@ function create:Win()
 
 	local function Logoft() -- WaterMark.LocalScript 
 		local script = Instance.new('LocalScript', Logo)
-		
+
 		while wait() do
 			script.Parent.Rotation = script.Parent.Rotation + 1
 		end
@@ -852,7 +852,7 @@ function create:Win()
 				DropButton.Size = UDim2.new(0, 155, 0, 24)
 				DropButton.Font = _G.TextFont
 				DropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-				DropButton.TextSize = 11.000
+				DropButton.TextSize = 16.000
 				DropButton.TextWrapped = true
 				DropButton.Text = ""
 				DropButton.BorderSizePixel = 0 
