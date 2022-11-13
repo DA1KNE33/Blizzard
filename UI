@@ -1534,7 +1534,7 @@ function create:Win()
 				Labelxd.Font = _G.TextFont
 				Labelxd.Text = tostring(text)
 				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
-				Labelxd.TextSize = 12.000
+				Labelxd.TextSize = 9.000
 
 				function  labelfuc:Change(text2)
 					Labelxd.Text = tostring(text2)
