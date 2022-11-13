@@ -1212,7 +1212,7 @@ function create:Win()
 				SliderFrame.ClipsDescendants = true 
 
 				local fakeclick = Instance.new("TextButton",SliderFrame)
-
+				
 				fakeclick.BackgroundColor3 = Color3.fromRGB(15,15,15)
 				fakeclick.BorderSizePixel = 0
 				fakeclick.Size = UDim2.new(1, 0, 1, 0)
@@ -1252,7 +1252,7 @@ function create:Win()
 				TalabelSlider.TextSize = 11.000
 				TalabelSlider.BorderSizePixel = 0
 				TalabelSlider.ClipsDescendants = true 
-				TalabelSlider.TextXAlignment = Enum.TextXAlignment.Left
+				TalabelSlider.TextXAlignment = Enum.TextXAlignment.Center
 
 
 				local ValueFrame = Instance.new("Frame")
