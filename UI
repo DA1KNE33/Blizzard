@@ -162,6 +162,13 @@ function create:Win()
 	Logo.Image = "rbxassetid://11511118010"
 	Logo.Size = UDim2.new(0,40, 0, 40)
 
+	local function Logoft() -- WaterMark.LocalScript 
+		local script = Instance.new('LocalScript', Logo)
+		while wait() do
+			script.Parent.Rotation = script.Parent.Rotation + 1
+		end
+	end
+	coroutine.wrap(Logoft)()
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
