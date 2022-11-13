@@ -1,0 +1,20 @@
+repeat wait() until game:IsLoaded()
+local a = Instance.new("ScreenGui" , game.workspace)
+a.Name = "WhiteScreenz"
+a.Enabled = false
+a.Parent = game:GetService("CoreGui")
+local b = Instance.new("Frame" , a)
+b.Name = "Frame"
+b.Size = UDim2.new(1, 0, 1, 0)
+b.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+game:GetService("UserInputService").WindowFocused:connect(function()
+    game.RunService:Set3dRenderingEnabled(true)
+    game:GetService("CoreGui").WhiteScreenz.Enabled = false
+    game:GetService("CoreGui").WhiteScreenz.IgnoreGuilnset = true
+end)
+game:GetService("UserInputService").WindowFocusReleased:connect(function()
+    game.RunService:Set3dRenderingEnabled(false)
+    game:GetService("CoreGui").WhiteScreenz.Enabled = true
+    game:GetService("CoreGui").WhiteScreenz.IgnoreGuilnset = true
+end)
