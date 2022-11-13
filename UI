@@ -109,22 +109,14 @@ function create:Win()
 	WaterMark.Position = UDim2.new(0.920161366, 0, 0.963156164, 0)
 	WaterMark.Size = UDim2.new(0.0796874985, 0, 0.0361781083, 0)
 	WaterMark.Image = "rbxassetid://11483425326"
-
-	local function WaterMarkft() -- WaterMark.LocalScript 
-		local script = Instance.new('LocalScript', WaterMark)
-
-		local Info = TweenInfo.new(.3)
-
-		script.Parent.MouseLeave:Connect(function()
-			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=0})
-			Tween:Play()
-		end)
-		script.Parent.MouseEnter:Connect(function()
-			local Tween = game:GetService("TweenService"):Create(script.Parent,Info,{ImageTransparency=1})
-			Tween:Play()
-		end)
-	end
-	coroutine.wrap(WaterMarkft)()
+	WaterMark.MouseLeave:Connect(function()
+		local Tween = game:GetService("TweenService"):Create(WaterMark,TweenInfo.new(.3),{ImageTransparency=0})
+		Tween:Play()
+	end)
+	WaterMark.MouseEnter:Connect(function()
+		local Tween = game:GetService("TweenService"):Create(WaterMark,TweenInfo.new(.3),{ImageTransparency=1})
+		Tween:Play()
+	end)
 
 	PageTap.Name = "PageTap"
 	PageTap.Parent = Main
@@ -156,20 +148,21 @@ function create:Win()
 
 	Logo.Name = "Logo"
 	Logo.Parent = PageTap 
-	Logo.Position = UDim2.new(-0.16, 0, 0.3 ,0)
+	Logo.AnchorPoint = 
+	Logo.Position = UDim2.new(-0.12,0,.5,0)
 	Logo.BackgroundTransparency = 1
 	Logo.Image = "rbxassetid://11511118010"
 	Logo.Size = UDim2.new(0,30, 0, 30)
-
-	local function Logoft() -- WaterMark.LocalScript 
-		local script = Instance.new('LocalScript', Logo)
-
-		while wait() do
-			script.Parent.Rotation = script.Parent.Rotation + 1
-		end
+	
+	Logo.MouseEnter:Connect(function()
+		Logo:TweenSize(UDim2.new(0, 40, 0, 40), "Out", "Quad", .2)
+	end)
+	Logo.MouseLeave:Connect(function()
+		Logo:TweenSize(UDim2.new(0, 30, 0, 30), "Out", "Quad", .2)
+	end)
+	while wait() do
+		Logo.Parent.Rotation = Logo.Parent.Rotation + 1
 	end
-	coroutine.wrap(Logoft)()
-
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
 	UIListLayout_ScolTap.SortOrder = Enum.SortOrder.LayoutOrder
