@@ -1196,7 +1196,7 @@ function create:Win()
 				return  dropfuc
 			end
 
-			function ems:Slder(text,min,max,de,callback)
+			function ems:Slider(text,min,max,de,callback)
 				local SliderFunc = {}
 				local SliderFrame = Instance.new("Frame")
 
@@ -1244,8 +1244,8 @@ function create:Win()
 				TalabelSlider.BackgroundColor3 = _G.Color
 				TalabelSlider.BackgroundTransparency = 1
 				TalabelSlider.AnchorPoint = Vector2.new(0.5, 0.5)
-				TalabelSlider.Position = UDim2.new(0.5, 0, 0.2, 0)
-				TalabelSlider.Size = UDim2.new(0, 145, 0, 20)
+				TalabelSlider.Position = UDim2.new(0.33,0,0.3,0)
+				TalabelSlider.Size = UDim2.new(0.62,0, 0, 20)
 				TalabelSlider.Font = _G.Font
 				TalabelSlider.Text = text
 				TalabelSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
