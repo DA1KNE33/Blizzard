@@ -4,7 +4,7 @@ do
 		ui:Destroy()
 	end
 end
-if _G.TextFont == nil then _G.TextFont = Enum.Font.FredokaOne end
+if _G.Font == nil then _G.Font = Enum.Font.FredokaOne end
 if _G.Color == nil then _G.Color = Color3.fromRGB(80, 245, 245) end
 
 
@@ -214,7 +214,7 @@ function create:Win()
 		TextButton_Tap.BackgroundTransparency = 1
 		TextButton_Tap.Position = UDim2.new(0.0151898731, 0, 0.132352948, 0)
 		TextButton_Tap.Size = UDim2.new(0, 75, 0, 50)
-		TextButton_Tap.Font = _G.TextFont
+		TextButton_Tap.Font = _G.Font
 		TextButton_Tap.TextColor3 = Color3.fromRGB(155, 155, 155)
 		TextButton_Tap.TextSize = 14.000
 		TextButton_Tap.TextWrapped = true
@@ -230,7 +230,7 @@ function create:Win()
 		TextLabel_Tap.AnchorPoint = Vector2.new(0.5, 0.5)
 		TextLabel_Tap.Position = UDim2.new(0.52, 0, 0.8, 0)
 		TextLabel_Tap.Size = UDim2.new(0, 0, 0, 0)
-		TextLabel_Tap.Font = _G.TextFont
+		TextLabel_Tap.Font = _G.Font
 		TextLabel_Tap.Text = " "
 		TextLabel_Tap.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TextLabel_Tap.TextSize = 14.000
@@ -441,7 +441,7 @@ function create:Win()
 				emsTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
 				emsTextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 				emsTextButton.Size = UDim2.new(1, 0, 0.8, 0)
-				emsTextButton.Font = _G.TextFont
+				emsTextButton.Font = _G.Font
 				emsTextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 				emsTextButton.TextSize = 13.000
 				emsTextButton.TextWrapped = true
@@ -463,7 +463,7 @@ function create:Win()
 				TextLabel_emsTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextLabel_emsTextButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 				TextLabel_emsTextButton.Size = UDim2.new(0, 0, 0, 0)
-				TextLabel_emsTextButton.Font = _G.TextFont
+				TextLabel_emsTextButton.Font = _G.Font
 				TextLabel_emsTextButton.Text = text
 				TextLabel_emsTextButton.TextColor3 = _G.Color
 				TextLabel_emsTextButton.TextSize = 10.000
@@ -534,7 +534,7 @@ function create:Win()
 				emsTextButton1.AnchorPoint = Vector2.new(0.5, 0.5)
 				emsTextButton1.Position = UDim2.new(0.5, 0, 0.5, 0)
 				emsTextButton1.Size = UDim2.new(1, 0, 0.8, 0)
-				emsTextButton1.Font = _G.TextFont
+				emsTextButton1.Font = _G.Font
 				emsTextButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
 				emsTextButton1.TextSize = 13.000
 				emsTextButton1.TextWrapped = true
@@ -556,7 +556,7 @@ function create:Win()
 				TextLabel_emsTextButton1.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextLabel_emsTextButton1.Position = UDim2.new(0.5, 0, 0.5, 0)
 				TextLabel_emsTextButton1.Size = UDim2.new(0, 0, 0, 0)
-				TextLabel_emsTextButton1.Font = _G.TextFont
+				TextLabel_emsTextButton1.Font = _G.Font
 				TextLabel_emsTextButton1.Text = text
 				TextLabel_emsTextButton1.TextColor3 = Color3.fromRGB(255, 255 ,255)
 				TextLabel_emsTextButton1.TextSize = 10.000
@@ -629,7 +629,7 @@ function create:Win()
 				ToggleButton.AnchorPoint = Vector2.new(0, 0.5)
 				ToggleButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 				ToggleButton.Size = UDim2.new(0, 155, 0, 25)
-				ToggleButton.Font = _G.TextFont
+				ToggleButton.Font = _G.Font
 				ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ToggleButton.TextSize = 13.000
 				ToggleButton.TextWrapped = false
@@ -646,7 +646,7 @@ function create:Win()
 				ToggleButton2.AnchorPoint = Vector2.new(0.5, 0.5)
 				ToggleButton2.Position = UDim2.new(1, 0, 0.45, 0)
 				ToggleButton2.Size = UDim2.new(0, 20, 0, 20)
-				ToggleButton2.Font = _G.TextFont
+				ToggleButton2.Font = _G.Font
 				ToggleButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ToggleButton2.TextSize = 13.000
 				ToggleButton2.TextWrapped = false
@@ -662,7 +662,7 @@ function create:Win()
 				TextLabelToggle.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextLabelToggle.Position = UDim2.new(0.64, 0, 0.4, 0)
 				TextLabelToggle.Size =  UDim2.new(0, 150, 0, 40)
-				TextLabelToggle.Font = _G.TextFont
+				TextLabelToggle.Font = _G.Font
 				TextLabelToggle.Text = tostring(text)
 				TextLabelToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TextLabelToggle.TextSize = 11.000
@@ -682,7 +682,7 @@ function create:Win()
 				TextButton_2_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextButton_2_Toggle.Position = UDim2.new(0.5, 0, 0.5, 0)
 				TextButton_2_Toggle.Size = UDim2.new(0, 19, 0, 19)
-				TextButton_2_Toggle.Font = _G.TextFont
+				TextButton_2_Toggle.Font = _G.Font
 				TextButton_2_Toggle.Text = " "
 				TextButton_2_Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
 				TextButton_2_Toggle.TextSize = 12.000
@@ -698,7 +698,7 @@ function create:Win()
 				TextButton_3_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextButton_3_Toggle.Position = UDim2.new(0.5, 0, 0.5, 0)
 				TextButton_3_Toggle.Size = UDim2.new(0, 17, 0, 17)
-				TextButton_3_Toggle.Font = _G.TextFont
+				TextButton_3_Toggle.Font = _G.Font
 				TextButton_3_Toggle.Text = " "
 				TextButton_3_Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
 				TextButton_3_Toggle.TextSize = 12.000
@@ -850,7 +850,7 @@ function create:Win()
 				DropButton.AnchorPoint = Vector2.new(0.5, 0.5)
 				DropButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 				DropButton.Size = UDim2.new(0, 155, 0, 24)
-				DropButton.Font = _G.TextFont
+				DropButton.Font = _G.Font
 				DropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 				DropButton.TextSize = 12.000
 				DropButton.TextWrapped = true
@@ -868,7 +868,7 @@ function create:Win()
 				TextLabelDrop2.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextLabelDrop2.Position = UDim2.new(0.5, 0, 0.5, 0)
 				TextLabelDrop2.Size = UDim2.new(0, 155, 0, 22)
-				TextLabelDrop2.Font = _G.TextFont
+				TextLabelDrop2.Font = _G.Font
 				TextLabelDrop2.Text = text
 				TextLabelDrop2.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TextLabelDrop2.TextSize = 12.000
@@ -895,7 +895,7 @@ function create:Win()
 				TextButton_Dropdown.BackgroundColor3 = _G.Color
 				TextButton_Dropdown.BorderSizePixel = 0
 				TextButton_Dropdown.Size = UDim2.new(0, 22, 0, 24)
-				TextButton_Dropdown.Font = _G.TextFont
+				TextButton_Dropdown.Font = _G.Font
 				TextButton_Dropdown.Text = "  "
 				TextButton_Dropdown.TextColor3 = Color3.fromRGB(0, 0, 0)
 				TextButton_Dropdown.TextSize = 12.000
@@ -987,7 +987,7 @@ function create:Win()
 					listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15 ,15)
 					listDropButton.BorderSizePixel = 0
 					listDropButton.Size = UDim2.new(0, 155, 0, 24)
-					listDropButton.Font = _G.TextFont
+					listDropButton.Font = _G.Font
 					listDropButton.Text = tostring(v)
 					listDropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 					listDropButton.TextSize = 11.000
@@ -1133,7 +1133,7 @@ function create:Win()
 					listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 					listDropButton.BorderSizePixel = 0
 					listDropButton.Size = UDim2.new(0, 155, 0, 24)
-					listDropButton.Font = _G.TextFont
+					listDropButton.Font = _G.Font
 					listDropButton.Text = tostring(text2)
 					listDropButton.TextColor3 = _G.Color
 					listDropButton.TextSize = 11.000
@@ -1216,7 +1216,7 @@ function create:Win()
 				fakeclick.BackgroundColor3 = Color3.fromRGB(15,15,15)
 				fakeclick.BorderSizePixel = 0
 				fakeclick.Size = UDim2.new(1, 0, 1, 0)
-				fakeclick.Font = _G.TextFont
+				fakeclick.Font = _G.Font
 				fakeclick.Text = ""
 				fakeclick.TextColor3 = Color3.fromRGB(255, 255, 255)
 				fakeclick.Transparency = 1
@@ -1246,7 +1246,7 @@ function create:Win()
 				TalabelSlider.AnchorPoint = Vector2.new(0.5, 0.5)
 				TalabelSlider.Position = UDim2.new(0.5, 0, 0.2, 0)
 				TalabelSlider.Size = UDim2.new(0, 145, 0, 20)
-				TalabelSlider.Font = _G.TextFont
+				TalabelSlider.Font = _G.Font
 				TalabelSlider.Text = text
 				TalabelSlider.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TalabelSlider.TextSize = 11.000
@@ -1357,7 +1357,7 @@ function create:Win()
 				CustomValue.AnchorPoint = Vector2.new(0.5, 0.5)
 				CustomValue.Position = UDim2.new(0.5, 0, 0.5, 0)
 				CustomValue.Size = UDim2.new(0, 145, 0, 26)
-				CustomValue.Font = _G.TextFont
+				CustomValue.Font = _G.Font
 				CustomValue.PlaceholderColor3 = Color3.fromRGB(222, 222, 222)
 				CustomValue.PlaceholderText =  ""
 				CustomValue.Text =  tostring(de and math.floor((de / max) * (max - min) + min) or 0)
@@ -1483,7 +1483,7 @@ function create:Win()
 				lineframe.Position = UDim2.new(0., 0, 0.4, 0)
 				lineframe.BorderSizePixel = 0
 				lineframe.Size = UDim2.new(0, 40, 0, 1)
-				lineframe.Font = _G.TextFont
+				lineframe.Font = _G.Font
 				lineframe.TextColor3 = Color3.fromRGB(255, 255, 255)
 				lineframe.TextSize = 13.000
 				lineframe.Text = ""
@@ -1497,7 +1497,7 @@ function create:Win()
 				lineframe2.Position = UDim2.new(1, 0, 0.4, 0)
 				lineframe2.BorderSizePixel = 0
 				lineframe2.Size = UDim2.new(0, 40, 0, 1)
-				lineframe2.Font = _G.TextFont
+				lineframe2.Font = _G.Font
 				lineframe2.TextColor3 = Color3.fromRGB(255, 255, 255)
 				lineframe2.TextSize = 11.000
 				lineframe2.Text = ""
@@ -1511,7 +1511,7 @@ function create:Win()
 				lineframe3.Position = UDim2.new(0.5, 0, 0.5, 0)
 				lineframe3.BorderSizePixel = 0
 				lineframe3.Size = UDim2.new(0, 130, 0, 20)
-				lineframe3.Font = _G.TextFont
+				lineframe3.Font = _G.Font
 				lineframe3.Text = tostring(text)
 				lineframe3.TextColor3 = Color3.fromRGB(255, 255, 255)
 				lineframe3.TextSize = 12.000
@@ -1531,7 +1531,7 @@ function create:Win()
 				Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
 				Labelxd.BorderSizePixel = 0
 				Labelxd.Size = UDim2.new(0, 155, 0, 13)
-				Labelxd.Font = _G.TextFont
+				Labelxd.Font = _G.Font
 				Labelxd.Text = tostring(text)
 				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Labelxd.TextSize = 9.000
