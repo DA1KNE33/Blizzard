@@ -7489,18 +7489,7 @@ function library:CreateWindow(options, ...)
 					end
 				end
 			end
-		}}, 
-		{"AddKeybind", "__Designer.Keybind.ShowHideKey", settingssection, {
-			Name = "Show/Hide Key",
-			Location = library.configuration,
-			Flag = "__Designer.Settings.ShowHideKey",
-			LocationFlag = "hideKeybind",
-			Value = library.configuration.hideKeybind,
-			CoreBinding = true,
-			Callback = function()
-				lasthidebing = os.clock()
-			end
-		}}, {"AddLabel", "__Designer.Label.Version", settingssection, {
+		}} , {"AddLabel", "__Designer.Label.Version", settingssection, {
 			Name = "Library Version: " .. tostring(library.Version or "?")
 		}}}
 		if setclipboard and daaata[8] then
@@ -7954,9 +7943,6 @@ SettingSection:AddToggle({
 SettingSection:AddToggle({
 	Name = "Disabled 3D Rendering",
 	Value = getgenv().Settings["Disabled3dRendering"],
-	Keybind = {
-		Value = Enum.KeyCode.L
-	},
 	Callback = function(State)
 		if State then	
 			getgenv().Settings["Disabled3dRendering"] = true
