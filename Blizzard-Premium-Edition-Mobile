@@ -1686,7 +1686,7 @@ function library:CreateWindow(options, ...)
 	main.BorderColor3 = library.colors.outerBorder
 	colored[1 + #colored] = {main, "BorderColor3", "outerBorder"}
 	main.Position = UDim2.fromScale(0.5, 0.5)
-	main.Size = UDim2.fromOffset(500, 350)
+	main.Size = UDim2.fromOffset(450, 320)
 	makeDraggable(main, main)
 	mainBorder.Name = "mainBorder"
 	mainBorder.Parent = main
@@ -7489,7 +7489,18 @@ function library:CreateWindow(options, ...)
 					end
 				end
 			end
-		}} , {"AddLabel", "__Designer.Label.Version", settingssection, {
+		}}, 
+		{"AddKeybind", "__Designer.Keybind.ShowHideKey", settingssection, {
+			Name = "Show/Hide Key",
+			Location = library.configuration,
+			Flag = "__Designer.Settings.ShowHideKey",
+			LocationFlag = "hideKeybind",
+			Value = library.configuration.hideKeybind,
+			CoreBinding = true,
+			Callback = function()
+				lasthidebing = os.clock()
+			end
+		}}, {"AddLabel", "__Designer.Label.Version", settingssection, {
 			Name = "Library Version: " .. tostring(library.Version or "?")
 		}}}
 		if setclipboard and daaata[8] then
@@ -7943,6 +7954,9 @@ SettingSection:AddToggle({
 SettingSection:AddToggle({
 	Name = "Disabled 3D Rendering",
 	Value = getgenv().Settings["Disabled3dRendering"],
+	Keybind = {
+		Value = Enum.KeyCode.L
+	},
 	Callback = function(State)
 		if State then	
 			getgenv().Settings["Disabled3dRendering"] = true
